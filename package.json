@@ -1,8 +1,8 @@
 {
-  "name": "disable-scroll",
+  "name": "@klarna/disable-scroll",
   "version": "0.0.1",
   "description": "Fix the screen to the current position and get a canvas where to draw on top of it",
-  "main": "index.js",
+  "main": "dist/disableScroll.js",
   "scripts": {
     "build": "sagui build",
     "dist": "sagui dist",
@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/klarna/disable-scroll#readme",
   "devDependencies": {
+    "ramda": "^0.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "sagui": "^8.0.2"
   }
 }

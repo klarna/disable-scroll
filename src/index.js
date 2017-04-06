@@ -1,7 +1,38 @@
-import style from './index.css'
+import React from 'react'
+import {render} from 'react-dom'
+import {range} from 'ramda'
+import setupDisableScroll from './disableScroll'
 
-const div = document.createElement('div')
-div.innerHTML = '<h1>Hello World</h1>'
-div.className = style.component
+const {pin, release, container} = setupDisableScroll()
 
-document.getElementById('root').appendChild(div)
+render(
+  <main>
+    {range(0, 100).map((_, index) => <p key={index}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>)}
+  </main>,
+  document.getElementById('root')
+)
+
+document.body.appendChild(container)
+
+render(
+  <div>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <h1>This should be floating</h1>
+    <button
+      onClick={() => {
+        release()
+        setTimeout(() => pin(), 1000)
+      }}>
+      Close
+    </button>
+  </div>,
+  container
+)
+
+setTimeout(() => pin(), 1000)
