@@ -16,18 +16,18 @@ document.body.appendChild(container)
 
 render(
   <div>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
-    <h1>This should be floating</h1>
+    <h1>This is placed on top</h1>
+    <h1>This is placed on top</h1>
+    <h1>This is placed on top</h1>
     <button
       onClick={() => {
         release()
         setTimeout(() => pin(), 1000)
+      }}
+      style={{
+        background: 'black',
+        color: 'white',
+        padding: '10px 20px',
       }}>
       Close
     </button>
