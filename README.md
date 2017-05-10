@@ -1,5 +1,9 @@
 # @klarna/disable-scroll
 
+[![Build Status](https://travis-ci.org/klarna/disable-scroll.svg?branch=master)](https://travis-ci.org/klarna/disable-scroll)
+[![npm version](https://img.shields.io/npm/v/@klarna/disable-scroll.svg?maxAge=10000)](https://www.npmjs.com/package/@klarna/disable-scroll)
+
+
 [![example of fixing a layer on top of a scrollable body](demo.gif)](https://klarna.github.io/disable-scroll)
 
 > Demo of fixing a layer on top of a scrollable body. You can find it in [`https://klarna.github.io/disable-scroll`](https://klarna.github.io/disable-scroll)
