@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '6'
+deploy:
+  provider: npm
+  email: ui-admin.e@klarna.com
+  api_key:
+    secure: LWpAo/Oh+/9yKMlLAPglvS23Crq/qAgDxU+/p38ZOctD7MmDjWeN0TxRRgDW0Snt2on48yyp7g2F4jsUPaiAEoHNO7rRAL5T7+H5srnr98Swx6pnzK3f8PYNnBeqUT1Jwht6NJU8I+5oyDuQ1rjXGy/k3nBPegJsrHY8xvz2jQ0TCrhQWe0emukV16VBjg8LDmHCFAbttpICoAmQsvOhkZ8+oaSral614YpCyj97i5SG7VNHnt66K8XxGtv/ZL2itjGBgPWZ2fXjKHboQufpO36CP+lnCZrzqtL3bU5V9J1XAQZxoxWLi2r0t9WaVgGxt4A+xWXGZm+eahAe83kojw9mnAeKZqtJdQGO7HXsSjcZEg2ir/Cj0FfRJ+m704wxGKwmrbtAZxu4fAHsMYTvrxsxhdVUPNHlJjQuugvEpECWA2ZAaQsStNzcQ6gZBUs2jfNbWu5QMgwpyD2Xsfr5FmsudPtDs7Iaw04ui+f3wSq51RyWqB7/pxB9UrghbNQwZkFWzA5jAnNjYReQ5inAOwEKk/mPxjG08/T0FB3Lkoqd5NlweCwgny6DXsc4SNnzaEXvPz65oRPrmCs1K4zhBThHqCGAvPNN1GRvzybP4Ty4ci05kiOzOnxQRld0/aplqWZaB6cpVPYDO3G4OHGhDspsaDIbb1HY4lfgbiXKutE=
+  on:
+    tags: true
+    repo: klarna/disable-scroll
