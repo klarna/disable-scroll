@@ -40,7 +40,7 @@ export default (theWindow = window) => {
     container.style.top = `${scrollTop}px`
     container.style.display = 'block'
 
-    window.addEventListener('resize', resizeListener)
+    theWindow.addEventListener('resize', resizeListener)
   }
 
   const release = () => {
@@ -54,7 +54,7 @@ export default (theWindow = window) => {
 
     theWindow.document.documentElement.scrollTop = theWindow.document.body.scrollTop = scrollTop
 
-    window.removeEventListener('resize', resizeListener)
+    theWindow.removeEventListener('resize', resizeListener)
   }
 
   return { pin, release, container }

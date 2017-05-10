@@ -27,7 +27,7 @@ render(
       style={{
         background: 'black',
         color: 'white',
-        padding: '10px 20px',
+        padding: '10px 20px'
       }}>
       Close
     </button>

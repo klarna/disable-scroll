@@ -19,7 +19,10 @@ npm install --save @klarna/disable-scroll
 ## Usage
 
 ```javascript
-import {pin, release, container} from '@klarna/disable-scroll'
+import setupDisableScroll from '@klarna/disable-scroll'
+
+// Initialize the tool
+const {pin, release, container} = setupDisableScroll(window)
 
 pin() // Sticks the body to the current position
 release() // Releases the body so it becomes scrollable again
@@ -30,6 +33,8 @@ container.appendChild(p)
 ```
 
 ### API
+
+The `@klarna/disable-scroll` lib exposes a function that takes the `window` and returns the following functions:
 
 - `pin`: Sets the `top` of the `body` to match the current `scrollTop`, and then resizes the `body` to be the same width and height as the `window`.
 - `release`: Resets the `scrollTop` from the `top` of the `body`, and then resets the `body` to its original size.
