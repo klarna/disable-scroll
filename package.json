@@ -1,6 +1,6 @@
 {
   "name": "@klarna/disable-scroll",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Fix the screen to the current position and get a canvas where to draw on top of it",
   "main": "dist/disableScroll.js",
   "scripts": {
