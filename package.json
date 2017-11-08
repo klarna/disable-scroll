@@ -6,6 +6,7 @@
   "scripts": {
     "build": "sagui build",
     "dist": "sagui dist",
+    "prepublishOnly": "babel src/ -d dist/ --ignore spec.js,example/",
     "start": "sagui develop --port 3000",
     "test": "sagui test",
     "test:lint": "sagui test:lint",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/klarna/disable-scroll#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "ramda": "^0.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
