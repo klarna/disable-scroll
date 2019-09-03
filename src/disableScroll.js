@@ -23,11 +23,12 @@ export default (theWindow = window) => {
   const pin = () => {
     scrollTop = theWindow.document.documentElement.scrollTop || theWindow.document.body.scrollTop
 
-    previousBodyStyles.height = theWindow.document.body.style.height
-    previousBodyStyles.position = theWindow.document.body.style.position
-    previousBodyStyles.top = theWindow.document.body.style.top
-    previousBodyStyles.width = theWindow.document.body.style.width
-    previousBodyStyles.overflow = theWindow.document.body.style.overflow
+    const {height, position, top, width, overflow} = theWindow.document.body.style
+    previousBodyStyles.height = height
+    previousBodyStyles.position = position
+    previousBodyStyles.top = top
+    previousBodyStyles.width = width
+    previousBodyStyles.overflow = overflow
 
     theWindow.document.body.style.height = `${theWindow.innerHeight}px`
     theWindow.document.body.style.position = 'fixed'
@@ -44,11 +45,12 @@ export default (theWindow = window) => {
   }
 
   const release = () => {
-    theWindow.document.body.style.height = previousBodyStyles.height
-    theWindow.document.body.style.position = previousBodyStyles.position
-    theWindow.document.body.style.top = previousBodyStyles.top
-    theWindow.document.body.style.width = previousBodyStyles.width
-    theWindow.document.body.style.overflow = previousBodyStyles.overflow
+    const {height, position, top, width, overflow} = previousBodyStyles
+    theWindow.document.body.style.height = height
+    theWindow.document.body.style.position = position
+    theWindow.document.body.style.top = top
+    theWindow.document.body.style.width = width
+    theWindow.document.body.style.overflow = overflow
 
     container.style.display = 'none'
 
