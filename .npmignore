@@ -6,3 +6,6 @@ coverage
 node_modules
 npm-debug.log
 src
+demo.gif
+Makefile
+sagui.config.js
