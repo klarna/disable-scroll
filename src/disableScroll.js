@@ -7,6 +7,7 @@ export default (theWindow = window) => {
   container.style.left = '0'
   container.style.position = 'absolute'
   container.style.zIndex = '1'
+  container.style.pointerEvents = 'none'
 
   theWindow.document.body.appendChild(container)
 
