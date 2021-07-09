@@ -1,13 +1,18 @@
 export default (theWindow = window) => {
+  const containerClassName = 'klarna-disable-scroll'
+  const css = `.${containerClassName} * { pointer-events: auto }`
   const container = theWindow.document.createElement('div')
   let scrollTop
 
+  container.className = containerClassName
   container.style.display = 'none'
   container.style.top = '0'
   container.style.left = '0'
   container.style.position = 'absolute'
   container.style.zIndex = '1'
   container.style.pointerEvents = 'none'
+
+  addGlobalStyle(css)
 
   theWindow.document.body.appendChild(container)
 
@@ -19,6 +24,15 @@ export default (theWindow = window) => {
 
     container.style.height = `${theWindow.innerHeight}px`
     container.style.width = `${theWindow.innerWidth}px`
+  }
+
+  function addGlobalStyle () {
+    // Add global style
+    const head = document.head || document.getElementsByTagName('head')[0]
+    const style = document.createElement('style')
+    head.appendChild(style)
+    style.type = 'text/css'
+    style.appendChild(document.createTextNode(css))
   }
 
   const pin = () => {
