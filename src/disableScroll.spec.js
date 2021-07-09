@@ -46,6 +46,7 @@ describe('disableScroll', () => {
     equal(containerMock.style.left, '0')
     equal(containerMock.style.position, 'absolute')
     equal(containerMock.style.zIndex, '1')
+    equal(containerMock.style.pointerEvents, 'none')
 
     equal(windowMock.document.body.appendChild.div, containerMock)
   })
